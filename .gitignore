@@ -1,0 +1,9 @@
+# ingore linux directory info
+.directory
+
+# ignore vim swap & backup files
+*~
+*.swp
+
+#ignore any object files
+*.o
