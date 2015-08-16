@@ -26,7 +26,7 @@ int main() {
 
     for (size_t i=0; i < n; ++i) 
         vec[i] = rand() % 30 + 1;
-        /*scanf("%i", vec + i);*/
+        /* scanf("%i", vec + i); */
 
     vec_of_max_values_int(vec, n); 
 
@@ -72,13 +72,13 @@ void vec_of_max_values_float(float *inp_vec, size_t n) {
     float max_elem = inp_vec[0];
 
     for (size_t i=0; i < n; ++i) {
-        if ( fabs(max_elem - inp_vec[i]) <= EPSILON )
+        if ( (inp_vec[i] - max_elem) > EPSILON )
             max_elem = inp_vec[i];
         new_vec[i] = max_elem;
     }
 
     for (size_t i=0; i < n; ++i)
-        printf("%i, ", *(new_vec + i));
+        printf("%.3lf, ", *(new_vec + i));
     printf("\n");
 
     free (new_vec);
@@ -89,13 +89,13 @@ void vec_of_max_values_double(double *inp_vec, size_t n) {
     double max_elem = inp_vec[0];
 
     for (size_t i=0; i < n; ++i) {
-        if ( fabs(max_elem - inp_vec[i]) <= EPSILON )
+        if ( (inp_vec[i] - max_elem) > EPSILON )
             max_elem = inp_vec[i];
         new_vec[i] = max_elem;
     }
 
     for (size_t i=0; i < n; ++i)
-        printf("%i, ", *(new_vec + i));
+        printf("%.3lf, ", *(new_vec + i));
     printf("\n");
 
     free (new_vec);
