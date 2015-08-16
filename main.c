@@ -5,6 +5,13 @@
 
 #define EPSILON 0.001
 
+#define vec_of_max_values(x, y) _Generic((x),                                   \
+                                        long *: vec_of_max_values_long,         \
+                                        float *: vec_of_max_values_float,       \
+                                        double *: vec_of_max_values_double,     \
+                                        default: vec_of_max_values_int          \
+                                        )(x, y)
+
 void vec_of_max_values_int(int*, size_t);  
 void vec_of_max_values_long(long *, size_t);  
 void vec_of_max_values_float(float *, size_t);  
@@ -18,17 +25,17 @@ int main() {
     printf("Hello, pls, enter a vector of numbers: ");
     scanf("%d", &n);
 
-    int *vec = (int *)calloc(n, sizeof(int));
+    double *vec = (double *)calloc(n, sizeof(double));
     if (!vec) {
         printf("There is not any memory allocation!");
         exit(0);
     }
 
     for (size_t i=0; i < n; ++i) 
-        vec[i] = rand() % 30 + 1;
-        /* scanf("%i", vec + i); */
+        /*vec[i] = rand() % 30 + 1;*/
+        scanf("%lf", vec + i);
 
-    vec_of_max_values_int(vec, n); 
+    vec_of_max_values(vec, n); 
 
     free(vec);
 }
