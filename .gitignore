@@ -5,5 +5,10 @@
 *~
 *.swp
 
-#ignore any object files
+# ignore any object files
+*.so
 *.o
+
+# ignore R tmp and history files
+.Rhistory
+.RData
