@@ -1,3 +1,5 @@
+#include <R.h>
+#include <Rmath.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
@@ -17,7 +19,7 @@ void vec_of_max_values_long(long *, size_t);
 void vec_of_max_values_float(float *, size_t);  
 void vec_of_max_values_double(double *, size_t);  
 
-int main() {
+int main(int argc, char **argv) {
     time_t t;
     srand((unsigned) time(&t));
 

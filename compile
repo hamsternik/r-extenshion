@@ -1,0 +1,4 @@
+#!/bin/bash
+
+R CMD SHLIB -o vec_of_max_elems.so \
+    src/vec_of_max_elems.c 
