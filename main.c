@@ -1,5 +1,3 @@
-#include <R.h>
-#include <Rmath.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>

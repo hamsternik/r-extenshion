@@ -1,2 +1,2 @@
-useDynLib(vec_of_max_elems)
+useDynLib(MaxElemsVec)
 export(MaxElemsVec)

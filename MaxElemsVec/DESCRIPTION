@@ -1,12 +1,11 @@
 Package: MaxElemsVec
 Version: 1.0
 Date: 2015-09-05
-Type: Package
 Title: Vector of Maximal Elements
 Author: Nikita Khomitsevich <hamsternik9@gmail.com>
 Maintainer: Nikita Khomitsevich <hamsternik9@gmail.com>
-Depends: R(>=3.1.1)
-Description: A function, which obtain a vector with numbers and return a new vector with max elements, where each 'i'-th
-element is equal to the maximum element from choosed area (from first to 'i'-th). 
-License: GPL ver.2 
-
+Depends: R (>= 3.1.0)
+Description: A package which create a new vector of integers
+    with maximal elements in choosen area.
+License: GPL (>= 2) 
+URL: https://github.com/hamsternik/r-extenshion
