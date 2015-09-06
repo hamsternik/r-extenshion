@@ -1,8 +1,9 @@
-# First R extenshion
+# 'MaxElemsVec' R Package
 
 This is my first small extension for R language writing on __pure__ C. 
+For details, you can look at __main.c__ file for taking more info about code. _(yep, it's really small)_
 
-Here i present a small algorithm of array filling, where every _i_ element has to be as maximum from choosing gap restricts by only first _i_ elements.
+Here i present a small algorithm of array filling, where every _i-th_ element has to be maximal from choosing gap restricts by only first _i-th_ elements.
 
 
 ## Example
@@ -28,8 +29,8 @@ Here i present a small algorithm of array filling, where every _i_ element has t
 
 1. Download the source via git: `git clone https://github.com/hamsternik/r-extenshion.git`
 2. Go up in download folder: `cd r-extenshion`
-3. Run _compile_ in bash/zsh/etc. To get it runnable, make `chmod +x compile`
-4. After compile, run R-project interactive mode
-5. Check your location, like `getwd()`, it must be **/_some/location_/r-extension**
-6. Upload *vec_of_max_elems.R* script like `source("vec_of_max_elems.R")`
-7. Use `vec_of_max_elems` function in R, like in example above
+3. Here you might see a folder _MaxElemsVec_ which contains all needed files.
+4. If you wanna check my package, do it by `R CMD check MaxElemsVec` command
+5. After checking (or not, if you believe me) sources, you can build it by runnig `R CMD INSTALL --build MaxElemsVec` command. 
+
+Or you can obtain a _.tar.gz_ archive package using `R CMD INSTALL MaxElemsVec` and then install it like a local package (without any repos) with next one: `install.packages(path_to_file, repos = NULL, type="source")`, where _'path_to_file'_  is your location include _r-extenshion_ folder.
